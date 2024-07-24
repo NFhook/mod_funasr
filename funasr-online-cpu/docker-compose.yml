@@ -1,0 +1,17 @@
+version: "3.7"
+services:
+  funasronline:
+    image: funasr-online-cpu:v0.1.10
+    container_name: funasronline
+    restart: always
+    privileged: true
+    networks:
+      - asrnet
+    ports:
+      - 10095:10095
+    volumes:
+      - $PWD/funasr-runtime-resources/models:/workspace/models
+
+networks:
+  asrnet:
+    driver: bridge
