@@ -33,8 +33,10 @@ fs_cli
 ```
 
 #### command
+> when answer.
 ```
-uuid_audio_stream <uuid> start <wss-url> <mix-type> <sampling-rate> <metadata>
+uuid_funasr <uuid> start <wss-url> <mix-type> <sampling-rate> <metadata>
+uuid_funasr 8cf9ebf1-a2db-454a-a49e-57ab68798815 start ws://10.10.10.30:10095 stereo 8k {"chunk_size":[5,10,5],"wav_name":"h5","is_speaking":true,"chunk_interval":10,"itn":true,"mode":"offline","hotwords":null}
 ```
 Attaches a media bug and starts streaming audio (in L16 format) to the websocket server. FS default is 8k. If sampling-rate is other than 8k it will be resampled.
 - `uuid` - Freeswitch channel unique id
@@ -49,22 +51,22 @@ Attaches a media bug and starts streaming audio (in L16 format) to the websocket
 - `metadata` - (optional) a valid `utf-8` text to send. It will be sent the first before audio streaming starts.
 
 ```
-uuid_audio_stream <uuid> send_text <metadata>
+uuid_funasr <uuid> send_text <metadata>
 ```
 Sends a text to the websocket server. Requires a valid `utf-8` text.
 
 ```
-uuid_audio_stream <uuid> stop <metadata>
+uuid_funasr <uuid> stop <metadata>
 ```
 Stops audio stream and closes websocket connection. If _metadata_ is provided it will be sent before the connection is closed.
 
 ```
-uuid_audio_stream <uuid> pause
+uuid_funasr <uuid> pause
 ```
 Pauses audio stream
 
 ```
-uuid_audio_stream <uuid> resume
+uuid_funasr <uuid> resume
 ```
 Resumes audio stream
 
