@@ -6,7 +6,7 @@ cd funasr-online-cpu
 docker build -t funasr-online-cpu:v0.1.10 .
 docker-compose up -d
 ```
-
+> can use hotwords version, add hotwords.txt  
 
 
 #### mod_funasr
