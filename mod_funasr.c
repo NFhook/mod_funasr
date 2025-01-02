@@ -262,10 +262,10 @@ SWITCH_MODULE_LOAD_FUNCTION(mod_funasr_load)
         switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_ERROR, "Couldn't register an event subclass for mod_funasr API.\n");
         return SWITCH_STATUS_TERM;
     }
-    SWITCH_ADD_API(api_interface, "uuid_audio_stream", "audio_stream API", stream_function, STREAM_API_SYNTAX);
-    switch_console_set_complete("add uuid_audio_stream start wss-url metadata");
-    switch_console_set_complete("add uuid_audio_stream start wss-url");
-    switch_console_set_complete("add uuid_audio_stream stop");
+    SWITCH_ADD_API(api_interface, "uuid_funasr", "audio_stream API", stream_function, STREAM_API_SYNTAX);
+    switch_console_set_complete("add uuid_funasr start wss-url metadata");
+    switch_console_set_complete("add uuid_funasr start wss-url");
+    switch_console_set_complete("add uuid_funasr stop");
 
     switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_NOTICE, "mod_funasr API successfully loaded\n");
 

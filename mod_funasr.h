@@ -10,11 +10,11 @@
 #define MAX_WS_URI (4096)
 #define MAX_METADATA_LEN (8192)
 
-#define EVENT_CONNECT           "mod_funasr::connect"
-#define EVENT_DISCONNECT        "mod_funasr::disconnect"
-#define EVENT_ERROR             "mod_funasr::error"
-#define EVENT_JSON              "mod_funasr::json"
-#define EVENT_PLAY              "mod_funasr::play"
+#define EVENT_CONNECT           "funasr::connect"
+#define EVENT_DISCONNECT        "funasr::disconnect"
+#define EVENT_ERROR             "funasr::error"
+#define EVENT_JSON              "funasr::json"
+#define EVENT_PLAY              "funasr::play"
 
 typedef void (*responseHandler_t)(switch_core_session_t* session, const char* eventName, const char* json);
 
